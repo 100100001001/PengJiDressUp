@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public GameObject ribbon1;
     public GameObject bag1;
 
+    // 버튼 형식의 옷입히기
     public void Click(string type)
     {
         switch (type)
