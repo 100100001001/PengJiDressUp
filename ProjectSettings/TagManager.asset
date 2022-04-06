@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - hat1
+  - ribbon1
+  - bag1
   layers:
   - Default
   - TransparentFX
