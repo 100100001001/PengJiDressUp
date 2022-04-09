@@ -12,19 +12,19 @@ public class PlayerController : MonoBehaviour
     {
         Debug.Log("¿Í!");
 
-        switch (collision.tag)
-        {
-            case "hat1":
-                hat1.SetActive(hat1.activeSelf ? false : true);
-                break;
-            case "ribbon1":
-                ribbon1.SetActive(ribbon1.activeSelf ? false : true);
-                break;
-            case "bag1":
-                bag1.SetActive(bag1.activeSelf ? false : true);
-                break;
-            default:
-                break;
-        }
+        //switch (collision.tag)
+        //{
+        //    case "hat1":
+        //        hat1.SetActive(hat1.activeSelf ? false : true);
+        //        break;
+        //    case "ribbon1":
+        //        ribbon1.SetActive(ribbon1.activeSelf ? false : true);
+        //        break;
+        //    case "bag1":
+        //        bag1.SetActive(bag1.activeSelf ? false : true);
+        //        break;
+        //    default:
+        //        break;
+        //}
     }
 }

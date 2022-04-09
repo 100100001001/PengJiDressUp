@@ -1,4 +1,4 @@
-using System.Collections;
+ï»¿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,27 +9,89 @@ public class GameManager : MonoBehaviour
     public GameObject ribbon1;
     public GameObject bag1;
 
-    // ¹öÆ° Çü½ÄÀÇ ¿ÊÀÔÈ÷±â
+    public GameObject lens1;
+    public GameObject lens2;
+    public GameObject lens3;
+    public GameObject lens4;
+    public GameObject lens5;
+    public GameObject lens6;
+
+    public GameObject[] hairItems;
+    private int hairItemsCount = 0;
+
+    // ë²„íŠ¼ í˜•ì‹ì˜ ì˜·ìž…ížˆê¸°
     public void Click(string type)
     {
+        //switch (type)
+        //{
+        //    case "hat1":
+        //        hat1.SetActive(hat1.activeSelf ? false : true);
+        //        break;
+        //    case "ribbon1":
+        //        ribbon1.SetActive(ribbon1.activeSelf ? false : true);
+        //        break;
+        //    case "bag1":
+        //        bag1.SetActive(bag1.activeSelf ? false : true);
+        //        break;
+        //    case "lens":
+        //        lens.SetActive(lens.activeSelf ? false : true);
+        //        break;
+        //    default:
+        //        break;
+        //}
         switch (type)
         {
-            case "hat1":
-                hat1.SetActive(hat1.activeSelf ? false : true);
+            case "red":
+                lens1.SetActive(lens1.activeSelf ? false : true);
                 break;
-            case "ribbon1":
-                ribbon1.SetActive(ribbon1.activeSelf ? false : true);
+            case "yello":
+                lens2.SetActive(lens2.activeSelf ? false : true);
                 break;
-            case "bag1":
-                bag1.SetActive(bag1.activeSelf ? false : true);
+            case "green":
+                lens3.SetActive(lens3.activeSelf ? false : true);
+                break;
+            case "skyblue":
+                lens4.SetActive(lens4.activeSelf ? false : true);
+                break;
+            case "blue":
+                lens5.SetActive(lens5.activeSelf ? false : true);
+                break;
+            case "lilac":
+                lens6.SetActive(lens6.activeSelf ? false : true);
                 break;
             default:
                 break;
         }
     }
 
+    // ë‹¤ì‹œ ì‹œìž‘
    public void Reload()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    // ìŠ¬ë¡¯
+    public void InItemRight()
+    {
+        hairItems[hairItemsCount].SetActive(false);
+        hairItemsCount++;
+
+        if (hairItemsCount >= hairItems.Length)
+        {
+            hairItemsCount = hairItems.Length - 1;
+        }
+        else { hairItems[hairItemsCount].SetActive(true); }
+    }
+
+    public void InItemLeft()
+    {
+        hairItems[hairItemsCount].SetActive(false);
+        hairItemsCount--;
+
+        if (hairItemsCount < 0)
+        {
+            hairItemsCount = 0;
+        }
+        else { hairItems[hairItemsCount].SetActive(true); }
     }
 }

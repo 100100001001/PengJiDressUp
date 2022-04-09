@@ -27,5 +27,7 @@ public class Drag : MonoBehaviour
         Vector3 rayPoint = ray.GetPoint(Vector3.Distance(transform.position, Camera.main.transform.position));
         //Move the GameObject when you drag it
         transform.position = rayPoint;
+
+        Debug.Log("움직였다!");
     }
 }
