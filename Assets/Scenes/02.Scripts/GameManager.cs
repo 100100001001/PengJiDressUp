@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -45,19 +46,19 @@ public class GameManager : MonoBehaviour
                 lens1.SetActive(lens1.activeSelf ? false : true);
                 break;
             case "yello":
-                lens2.SetActive(lens2.activeSelf ? false : true);
+                lens1.SetActive(lens1.activeSelf ? false : true);
                 break;
             case "green":
-                lens3.SetActive(lens3.activeSelf ? false : true);
+                lens1.SetActive(lens1.activeSelf ? false : true);
                 break;
             case "skyblue":
-                lens4.SetActive(lens4.activeSelf ? false : true);
+                lens1.SetActive(lens1.activeSelf ? false : true);
                 break;
             case "blue":
-                lens5.SetActive(lens5.activeSelf ? false : true);
+                lens1.SetActive(lens1.activeSelf ? false : true);
                 break;
             case "lilac":
-                lens6.SetActive(lens6.activeSelf ? false : true);
+                lens1.SetActive(lens1.activeSelf ? false : true);
                 break;
             default:
                 break;
